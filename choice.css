@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Bahnschrift";
+    background: rgb(13, 32, 44);
+  }
+nav{
+    box-sizing: border-box;
+    height: 80px;
+    width: 100%;
+}
+nav ul{
+    position: absolute;
+    top: 3%;
+    right: 4%;
+    list-style: none;
+    grid-gap: 40px;
+    display: inline-flex;
+    font-size: 20px;
+}
+.logo{
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    color: white;
+    font-weight: 800;
+    font-size: 39px;
+} 
+nav ul li a{
+    color: white;
+    text-decoration: none;
+}
+.img img{
+    position: absolute;
+    top: 20%;
+    right: 2%;
+    width: 30%;
+    background: none;
+}
+.img2 img{
+    position: absolute;
+    top: 10%;
+    right: 18%;
+    background: none;
+    width: 30%;
+}
+.form-container {
+    position: absolute;
+    top: 30%;
+    left: 5%;
+    max-width: 350px;
+    padding: 20px;
+    display: inline-block;
+  }
+  button[type=submit] {
+    background-color: #009b9b;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+  }
+
+        /* Responsive media query for small devices */
+        @media only screen and (max-width: 600px) {
+            .form-container {
+              margin-top: 50px;
+            }
+          }
