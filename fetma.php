@@ -10,8 +10,11 @@
     <table>
         <tr>
             <th>Id</th>
-            <th>Username</th>
-            <th>Password</th>
+            <th>Date</th>
+            <th>Play_Ground</th>
+            <th>Ref_id</th>
+            <th>Ad_id</th>
+            <th>user_id</th>
         </tr>
         <?php
         $conn = mysqli_connect('localhost','root','','fc_games');
@@ -19,13 +22,16 @@
             die('Connection Failed : '.$conn->connect_error);
         }
 
-        $sql = "SELECT user_id, u_Name, u_Password from users";
+        $sql = "SELECT 	Mt_id, Date, Play_Ground, Ref_id, Ad_id, user_id from matches";
         $result = $conn-> query($sql);
 
         if ($result-> num_rows > 0){
             while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>". $row["user_id"]. "</td><td>". $row["u_Name"].
-                 "</td><td>". $row["u_Password"]. "</td></tr>";
+                echo "<tr><td>". $row["Mt_id"]. "</td><td>". $row["Date"].
+                 "</td><td>".$row["Play_Ground"].
+                 "</td><td>".$row["Ref_id"].
+                 "</td><td>".$row["Ad_id"].
+                 "</td><td>". $row["user_id"]. "</td></tr>";
             }
             echo "</table>";
         }

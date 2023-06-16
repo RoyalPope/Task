@@ -33,25 +33,36 @@ nav ul li a{
 .img img{
     position: absolute;
     top: 20%;
-    right: 2%;
+    right: 30%;
     width: 30%;
     background: none;
 }
 .img2 img{
     position: absolute;
     top: 10%;
-    right: 18%;
+    right: 45%;
     background: none;
     width: 30%;
 }
 .form-container {
     position: absolute;
-    top: 30%;
-    left: 5%;
+    top: 20%;
+    right: 5%;
+    background: none;
     max-width: 350px;
     padding: 20px;
     display: inline-block;
   }
+  .form-container2 {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    background: none;
+    max-width: 350px;
+    padding: 20px;
+    display: inline-block;
+  }
+
   button[type=submit] {
     background-color: #009b9b;
     color: white;
@@ -67,6 +78,15 @@ nav ul li a{
         /* Responsive media query for small devices */
         @media only screen and (max-width: 600px) {
             .form-container {
-              margin-top: 50px;
+              margin-top: 250px;
+              margin-right: 45px;
+            }
+            .img img {
+              position: absolute;
+              top: 2%;
+            }
+            .img2 img {
+              position: absolute;
+              top: -2%;
             }
           }

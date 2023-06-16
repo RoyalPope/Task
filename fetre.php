@@ -10,8 +10,11 @@
     <table>
         <tr>
             <th>Id</th>
-            <th>Username</th>
-            <th>Password</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Age</th>
+            <th>Sex</th>
+            <th>Tel</th>
         </tr>
         <?php
         $conn = mysqli_connect('localhost','root','','fc_games');
@@ -19,13 +22,16 @@
             die('Connection Failed : '.$conn->connect_error);
         }
 
-        $sql = "SELECT user_id, u_Name, u_Password from users";
+        $sql = "SELECT 	Ref_id,F_Name,L_Name,Age,Sex,Tel from referees";
         $result = $conn-> query($sql);
 
         if ($result-> num_rows > 0){
             while ($row = $result-> fetch_assoc()) {
-                echo "<tr><td>". $row["user_id"]. "</td><td>". $row["u_Name"].
-                 "</td><td>". $row["u_Password"]. "</td></tr>";
+                echo "<tr><td>". $row["Ref_id"]. "</td><td>". $row["F_Name"].
+                 "</td><td>".$row["L_Name"].
+                 "</td><td>".$row["Age"].
+                 "</td><td>".$row["Sex"].
+                 "</td><td>". $row["Tel"]. "</td></tr>";
             }
             echo "</table>";
         }
